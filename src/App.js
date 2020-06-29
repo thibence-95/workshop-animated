@@ -1,11 +1,14 @@
 import React from 'react';
+import {useSpring, animated} from 'react-spring';
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import About from './components/About';
 import Landing from './components/Landing';
 
 function App() {
+  const fadeIn = useSpring({opacity: 1, from: {opacity: 0}})
   return (
+      <animated.div style={fadeIn}>
     <BrowserRouter>
       <Switch>
         <Route path="/about">
@@ -16,6 +19,7 @@ function App() {
         </Route>
       </Switch>
     </BrowserRouter>
+      </animated.div>
   );
 }
 

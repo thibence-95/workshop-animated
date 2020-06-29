@@ -1,3 +1,22 @@
+import React, {useState} from "react";
+import {useTransition, animated} from 'react-spring'
+
+
+  /*const [toggle, set] = useState(false)
+  const transitions = useTransition(toggle, null, {
+    from: { position: 'absolute', opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+  })
+  return transitions.map(({item, key, props}) =>
+      item
+          ? <animated.div style={props}>Graphic Designer</animated.div>
+          : <animated.div style={props}>Web Developer</animated.div>
+  )*/
+
+
+
+
 export default {
   //(Please Do Not Remove The comma(,) after every variable)
 
@@ -12,7 +31,7 @@ export default {
 
   // Landing Page Paragraph
   landingPagePara:
-    "Graphic/Web Designer",
+    "Graphic Designer",
 
   // Landing Page Image (replace - root/public/assets/photo.jpg)
   landingPageImage: "assets/photo.jpg",
