@@ -1,6 +1,11 @@
 import React from 'react';
+import {useSpring, animated} from 'react-spring';
 
-const Home = ({name, paragraph, authorImage})=>{
+
+
+const Home = ({name, paragraph, authorImage}) => {
+
+    const [, setY] = useSpring(() => ({ y: 0 }))
 
     return(
     <div>
@@ -13,7 +18,24 @@ const Home = ({name, paragraph, authorImage})=>{
                 <img src={authorImage} alt="Author"></img>
                 <div className="bg"></div>
             </div>
-
+        </div>
+    <div style={{
+        backgroundColor: "black",
+        color:"white",
+    }}>
+        <button
+            className={"backToTop"}
+            onClick={() => {
+                setY({
+                    y: 0,
+                    reset: true,
+                    from: { y: window.scrollY },
+                    onFrame: props => window.scroll(0, props.y)
+                })
+            }}
+        style={{zIndex:1, position: "fixed", bottom: 1, right: 2, marginBottom: 10, marginRight:10}}>
+            back to top
+        </button>
         </div>
     </div>
     )

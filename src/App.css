@@ -21,6 +21,11 @@ a{
     color: black;
 }
 
+.backToTop {
+  color: white;
+  background: black;
+}
+
 /* Header */
 
 .header_container{
@@ -79,6 +84,7 @@ a{
 }
 .home_container .image_container img{
   position: relative;
+  margin-right: 3rem;
   height: 26rem;
   width: 18rem;
   top:5rem;

@@ -1,26 +1,9 @@
 import React, {useState} from "react";
-import {useTransition, animated} from 'react-spring'
-
-
-  /*const [toggle, set] = useState(false)
-  const transitions = useTransition(toggle, null, {
-    from: { position: 'absolute', opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  })
-  return transitions.map(({item, key, props}) =>
-      item
-          ? <animated.div style={props}>Graphic Designer</animated.div>
-          : <animated.div style={props}>Web Developer</animated.div>
-  )*/
-
-
-
+import {Transition,} from 'react-spring/renderprops'
 
 export default {
-  //(Please Do Not Remove The comma(,) after every variable)
 
-  //Change The Website Template
+  //enter your info accordingly below
   name: "Moeti Chentuf",
 
   //Contact Email
@@ -31,7 +14,7 @@ export default {
 
   // Landing Page Paragraph
   landingPagePara:
-    "Graphic Designer",
+      "Graphic Designer/Web Developer",
 
   // Landing Page Image (replace - root/public/assets/photo.jpg)
   landingPageImage: "assets/photo.jpg",
@@ -79,7 +62,7 @@ export default {
     // Paste more projects here from the template
 
     /*
-                    If You Want To Add More Project just Copy and Paste This At The End (Update the id Respectively)
+                    If You Want To Add More Projects just Copy and Paste This At The End (Update the id Respectively)
                 ,{
                 id: 7,
                 service: 'Something Amazing',

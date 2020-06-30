@@ -5,8 +5,11 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import About from './components/About';
 import Landing from './components/Landing';
 
+
+
 function App() {
-  const fadeIn = useSpring({opacity: 1, from: {opacity: 0}})
+  const fadeIn = useSpring({config: { duration: 1000 }, opacity: 1, from: {opacity: 0}})
+
   return (
       <animated.div style={fadeIn}>
     <BrowserRouter>
